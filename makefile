@@ -6,9 +6,9 @@ TARGET = main.out
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CC) -o $@ $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $^
 
-main.o: main.c blockdiv.h
+main.o: main.c table_split.h
 
 clean:
 	rm -f *.o $(TARGET)
